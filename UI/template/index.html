@@ -1,0 +1,579 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Leitner</title>
+    <meta name="description" content="Mobilekit HTML Mobile UI Kit" />
+    <meta
+      name="keywords"
+      content="bootstrap 4, mobile template, cordova, phonegap, mobile, html"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/favicon.png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/icon/192x192.png"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="manifest" href="__manifest.json" />
+  </head>
+
+  <body>
+    <!-- loader -->
+    <div id="loader">
+      <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+    <!-- App Header -->
+    <div class="appHeader bg-primary scrolled">
+      <div class="left">
+        <a
+          href="#"
+          class="headerButton"
+          data-toggle="modal"
+          data-target="#sidebarPanel"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </a>
+      </div>
+      <div class="pageTitle">
+        Discover
+      </div>
+      <div class="right">
+        <a href="javascript:;" class="headerButton toggle-searchbox">
+          <ion-icon name="search-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <!-- * App Header -->
+    <!-- Search Component -->
+    <div id="search" class="appHeader">
+      <form class="search-form">
+        <div class="form-group searchbox">
+          <input type="text" class="form-control" placeholder="Search..." />
+          <i class="input-icon">
+            <ion-icon name="search-outline"></ion-icon>
+          </i>
+          <a href="javascript:;" class="ml-1 close toggle-searchbox">
+            <ion-icon name="close-circle"></ion-icon>
+          </a>
+        </div>
+      </form>
+    </div>
+    <!-- * Search Component -->
+    <!-- App Capsule -->
+    <div id="appCapsule">
+      <div class="header-large-title">
+        <h1 class="title">Leitner</h1>
+        <h4 class="subtitle">Welcome to this shit hole</h4>
+      </div>
+
+      <div class="section mt-3 mb-3">
+        <div class="card">
+          <div class="card-body p-0">
+            <h3 class="pt-3 pl-3">Stats</h3>
+            <div id="hero-area" class="graph"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section mt-3 mb-3">
+        <div class="row">
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h3 class="text-success h1 font-weight-bold mb-2">120</h3>
+                <h4 class="mb-0">Words</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h3 class="text-info h1 font-weight-bold mb-2">6</h3>
+                <h4 class="mb-0">Know</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h3 class="text-danger h1 font-weight-bold mb-2">16</h3>
+                <h4 class="mb-0">Fuck</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section mt-3 mb-3">
+        <div class="card">
+          <div class="card-body d-flex justify-content-between align-items-end">
+            <div>
+              <h6 class="card-subtitle">Discover</h6>
+              <h5
+                class="card-title mb-0 d-flex align-items-center justify-content-between"
+              >
+                Dark Mode
+              </h5>
+            </div>
+            <div class="custom-control custom-switch">
+              <input
+                type="checkbox"
+                class="custom-control-input dark-mode-switch"
+                id="darkmodeswitch"
+              />
+              <label class="custom-control-label" for="darkmodeswitch"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- app footer -->
+      <div class="appFooter">
+        <img src="assets/img/logo.png" alt="icon" class="footer-logo mb-2" />
+        <div class="footer-title">
+          Copyright © Mobilekit 2020. All Rights Reserved.
+        </div>
+        <div>Mobilekit is PWA ready Mobile UI Kit Template.</div>
+        Great way to start your mobile websites and pwa projects.
+
+        <div class="mt-2">
+          <a href="#" class="btn btn-icon btn-sm btn-secondary goTop">
+            <ion-icon name="arrow-up-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <!-- * app footer -->
+    </div>
+    <!-- * App Capsule -->
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+      <a href="index.html" class="item active">
+        <div class="col">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+      </a>
+      <a href="javascript:;" class="item toggle-searchbox">
+        <div class="col">
+          <ion-icon name="search-outline" class=""></ion-icon>
+        </div>
+      </a>
+      <a href="#" class="item">
+        <div class="col">
+          <div
+            class="action-button"
+            data-toggle="modal"
+            data-target="#ModalForm"
+          >
+            <ion-icon name="add-outline"></ion-icon>
+          </div>
+        </div>
+      </a>
+      <a href="page-chat.html" class="item">
+        <div class="col">
+          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+          <span class="badge badge-danger">5</span>
+        </div>
+      </a>
+      <a
+        href="javascript:;"
+        class="item"
+        data-toggle="modal"
+        data-target="#sidebarPanel"
+      >
+        <div class="col">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </a>
+    </div>
+    <!-- * App Bottom Menu -->
+    <!-- App Sidebar -->
+    <div
+      class="modal fade panelbox panelbox-left"
+      id="sidebarPanel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <!-- profile box -->
+            <div class="profileBox">
+              <div class="image-wrapper">
+                <img
+                  src="assets/img/sample/avatar/avatar1.jpg"
+                  alt="image"
+                  class="imaged rounded"
+                />
+              </div>
+              <div class="in">
+                <strong>Moslem Hady</strong>
+                <div class="text-muted">
+                  <ion-icon name="location"></ion-icon>
+                  Germany
+                </div>
+              </div>
+              <a
+                href="javascript:;"
+                class="close-sidebar-button"
+                data-dismiss="modal"
+              >
+                <ion-icon name="close"></ion-icon>
+              </a>
+            </div>
+            <!-- * profile box -->
+
+            <ul class="listview flush transparent no-line image-listview mt-2">
+              <li>
+                <a href="index.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="home-outline"></ion-icon>
+                  </div>
+                  <div class="in">
+                    Discover
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="app-components.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="cube-outline"></ion-icon>
+                  </div>
+                  <div class="in">
+                    Components
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="app-pages.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="layers-outline"></ion-icon>
+                  </div>
+                  <div class="in">
+                    <div>Pages</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="page-chat.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                  </div>
+                  <div class="in">
+                    <div>Chat</div>
+                    <span class="badge badge-danger">5</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <div class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="moon-outline"></ion-icon>
+                  </div>
+                  <div class="in">
+                    <div>Dark Mode</div>
+                    <div class="custom-control custom-switch">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input dark-mode-switch"
+                        id="darkmodesidebar"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="darkmodesidebar"
+                      ></label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="listview-title mt-2 mb-1">
+              <span>Friends</span>
+            </div>
+            <ul class="listview image-listview flush transparent no-line">
+              <li>
+                <a href="page-chat.html" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar7.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Sophie Asveld</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="page-chat.html" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar3.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Sebastian Bennett</div>
+                    <span class="badge badge-danger">6</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="page-chat.html" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar10.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Beth Murphy</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="page-chat.html" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar2.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Amelia Cabal</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="page-chat.html" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar5.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Henry Doe</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- sidebar buttons -->
+          <div class="sidebar-buttons">
+            <a href="javascript:;" class="button">
+              <ion-icon name="person-outline"></ion-icon>
+            </a>
+            <a href="javascript:;" class="button">
+              <ion-icon name="archive-outline"></ion-icon>
+            </a>
+            <a href="javascript:;" class="button">
+              <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a href="javascript:;" class="button">
+              <ion-icon name="log-out-outline"></ion-icon>
+            </a>
+          </div>
+          <!-- * sidebar buttons -->
+        </div>
+      </div>
+    </div>
+    <!-- * App Sidebar -->
+    <!-- welcome notification  -->
+    <div id="notification-welcome" class="notification-box">
+      <div class="notification-dialog android-style">
+        <div class="notification-header">
+          <div class="in">
+            <img
+              src="assets/img/icon/72x72.png"
+              alt="image"
+              class="imaged w24"
+            />
+            <strong>Mobilekit</strong>
+            <span>just now</span>
+          </div>
+          <a href="#" class="close-button">
+            <ion-icon name="close"></ion-icon>
+          </a>
+        </div>
+        <div class="notification-content">
+          <div class="in">
+            <h3 class="subtitle">Welcome to Mobilekit</h3>
+            <div class="text">
+              Mobilekit is a PWA ready Mobile UI Kit Template. Great way to
+              start your mobile websites and pwa projects.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Form -->
+    <div
+      class="modal fade modalbox"
+      id="ModalForm"
+      data-backdrop="static"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add</h5>
+            <a href="javascript:;" data-dismiss="modal">Close</a>
+          </div>
+          <div class="modal-body">
+            <div class="login-form">
+              <div class="section mt-2">
+                <h1>Add new word</h1>
+              </div>
+              <div class="section mt-4 mb-5">
+                <form>
+                  <div class="form-group boxed">
+                    <div class="input-wrapper">
+                      <label class="label" for="email1">Word</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email1"
+                        placeholder="Word"
+                      />
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group boxed">
+                    <div class="input-wrapper">
+                      <label class="label" for="password1">Definition</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="password1"
+                        placeholder="Definition"
+                      />
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group boxed">
+                    <div class="input-wrapper">
+                      <label class="label" for="password1">Hasan</label>
+                      <textarea
+                        class="form-control"
+                        placeholder="Hasan"
+                      ></textarea>
+
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group boxed">
+                    <div class="input-wrapper">
+                      <label class="label" for="password1">Category</label>
+                      <select class="form-control" placeholder="Category">
+                        <option>cat1</option>
+                        <option>cat2</option>
+                      </select>
+
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block btn-lg"
+                      data-dismiss="modal"
+                    >
+                      Add it
+                    </button>
+                  </div>
+
+                  <div class="form-links mt-3">
+                    <div>
+                      <a href="#">Back to Word List</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- * Modal Form -->
+
+    <!-- * welcome notification -->
+    <!-- ///////////// Js Files ////////////////////  -->
+    <!-- Jquery -->
+    <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/js/lib/popper.min.js"></script>
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- Owl Carousel -->
+    <script src="assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- jQuery Circle Progress -->
+    <script src="assets/js/plugins/jquery-circle-progress/circle-progress.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+
+    <!-- <script>
+      setTimeout(() => {
+        notification("notification-welcome", 5000);
+      }, 2000);
+    </script> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script>
+      $(function () {
+        Morris.Area({
+          element: "hero-area",
+          data: [
+            { period: "2010 Q1", iphone: 2666, itouch: 2647 },
+            { period: "2010 Q2", iphone: 2778, itouch: 2441 },
+            { period: "2010 Q3", iphone: 4912, itouch: 2501 },
+            { period: "2010 Q4", iphone: 3767, itouch: 5689 },
+            { period: "2011 Q1", iphone: 6810, itouch: 2293 },
+            { period: "2011 Q2", iphone: 5670, itouch: 1881 },
+            { period: "2011 Q3", iphone: 4820, itouch: 1588 },
+            { period: "2011 Q4", iphone: 15073, itouch: 5175 },
+            { period: "2012 Q1", iphone: 10687, itouch: 2028 },
+            { period: "2012 Q2", iphone: 8432, itouch: 1791 },
+          ],
+          xkey: "period",
+          ykeys: ["iphone", "ipad", "itouch"],
+          labels: ["iPhone", "iPad", "iPod Touch"],
+          pointSize: 2,
+          hideHover: "auto",
+        });
+      });
+    </script>
+  </body>
+</html>
